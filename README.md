@@ -39,4 +39,8 @@
         <td>Account Management</td>
         <td>Incomplete</td>
     </tr>
+    <tr>
+        <td>Login</td>
+        <td>Incomplete</td>
+    </tr>
 </table>
