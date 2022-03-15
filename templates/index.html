@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Dissolved-Gas Analysis</title>
+</head>
+
+<body>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">X</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>DISSOLVED-GAS ANALYSIS</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+            <a href="#record" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Record</a>
+            <a href="#account" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Account</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-black">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>DISSOLVED-GAS ANALYSIS</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:220px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" id="showcase">
+            <h1 class="w3-jumbo"><b>Dissolved-Gas Analysis</b></h1>
+            <h1 class="w3-xlarge w3-text-red"><b>
+                The fault type identification & interpretation of dissolved gas analysis in transformers
+            </b></h1>
+            <hr style="width:100%;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Home -->
+        <div class="w3-container w3-padding-24" id="home">
+            <h1 class="w3-xxxlarge w3-text-red"><b>HOME</b></h1>
+            <hr style="width:100px;border:5px solid red" class="w3-round">
+            <ul>
+                <li>A Duval triangle is used as a diagram used for fault type identification in dissolved-gas analysis of oil-filled high-voltage transformers and other electrical apparatus.</li>
+                <li>The duval pentagon-a new complementary tool for the interpretation of dissolved gas analysis in transformers.</li>
+            </ul>
+
+            <div class="flex-container">
+                <div class="flex-item-left">
+                    <img src="{{ img1 }}" alt="none">
+                </div>
+                <div class="flex-item-right">
+                    <img src="{{ img2 }}" alt="none">
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-container  w3-padding-24" id="record">
+            <h1 class="w3-xxxlarge w3-text-red"><b>RECORD</b></h1>
+            <hr style="width:100px;border:5px solid red" class="w3-round">
+            <table class="w3-table w3-striped w3-border">
+                <thead>
+                    <tr class="w3-red">
+                        <th>Record Name</th>
+                        <th>Methane Concentration</th>
+                        <th>Ethylene Concentration</th>
+                        <th>Acetylene Concentration</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Transformer 1</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>
+                        <a class="w3-button w3-green">Analyse</a>
+                        <a class="w3-button w3-red">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transformer 2</td>
+                    <td>48</td>
+                    <td>50</td>
+                    <td>99</td>
+                    <td>
+                        <a class="w3-button w3-green">Analyse</a>
+                        <a class="w3-button w3-red">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transformer 3</td>
+                    <td>22</td>
+                    <td>66</td>
+                    <td>77</td>
+                    <td>
+                        <a class="w3-button w3-green">Analyse</a>
+                        <a class="w3-button w3-red">Delete</a>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <form class="w3-card-4" style="padding: 2rem;">
+                <h2 class="w3-xxlarge w3-text-red"><b>Create New Record</b></h2>
+
+                <p>Record Name: <input class="w3-input w3-border w3-hover-green" type="text"></p>
+                <p>Record Date: <input class="w3-input w3-border w3-hover-green" type="date"></p>
+                <p>Methane Concentration: <input class="w3-input w3-border w3-hover-green" type="number"></p>
+                <p>Ethylene Concentration: <input class="w3-input w3-border w3-hover-green" type="number"></p>
+                <p>Acetylene Concentration: <input class="w3-input w3-border w3-hover-green" type="number"></p>
+                <button class="w3-btn w3-round w3-green">Submit</button>
+            </form>
+        </div>
+
+        <div class="w3-container  w3-padding-24" id="account">
+            <h1 class="w3-xxxlarge w3-text-red"><b>ACCOUNT</b></h1>
+            <hr style="width:100px;border:5px solid red" class="w3-round">
+            <h2 class="w3-xxlarge w3-text-red"><b>Account Details</b></h2>
+            <p>Account Name:
+                <p readonly class="w3-input w3-border">Faris Nazrin</p>
+                <p>E-mail:
+                    <p readonly class="w3-input w3-border">195845@student.upm.edu.my</p>
+                    <a class="w3-btn w3-round w3-teal">Edit</a>
+        </div>
+
+    </div>
+
+    <footer class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+        <p class="w3-right">&copy; 2022 - Dissolved-Gas Analysis</p>
+    </footer>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
