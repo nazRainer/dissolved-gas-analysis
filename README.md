@@ -13,4 +13,30 @@
     <li>Install flask:<br><code>pip install flask</code></li>
     <li>Run flask project:<br><code>flask run</code></li>
 </ol>
-
+<h1>Functionalities</h1>
+<table>
+    <tr>
+        <th>Features</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>Homepage</td>
+        <td>Incomplete</td>
+    </tr>
+    <tr>
+        <td>Duval Diagram</td>
+        <td>Incomplete</td>
+    </tr>
+    <tr>
+        <td>Records List</td>
+        <td>Incomplete</td>
+    </tr>
+    <tr>
+        <td>Record Form</td>
+        <td>Incomplete</td>
+    </tr>
+    <tr>
+        <td>Account Management</td>
+        <td>Incomplete</td>
+    </tr>
+</table>
